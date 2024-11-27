@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProduits"
+                android:hint="remplir la liste des produits"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtprix"
+                android:hint="donnez un prix"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/txtFruitLegumes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="Fruits et Legumes"/>
+
+                <RadioButton
+                    android:id="@+id/txtViandeSubstitut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="Viande et Subsitut"/>
+
+                <RadioButton
+                    android:id="@+id/txtProduitlaitier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="Produit laitier"/>
+
+                <RadioButton
+                    android:id="@+id/txtPatisserie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="Patisserie"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ajouter à la liste"
+            android:onClick="statiqueajouteralaliste"/>
+
+
+        <ListView
+            android:id="@+id/txtlisteViewProduits"
+            android:layout_width="match_parent"
+            android:layout_height="332dp"
+            android:layout_marginTop="16dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp" />
+
+        <TextView
+            android:id="@+id/txtTotalPrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: 0"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</android.widget.RelativeLayout>
